@@ -4,7 +4,6 @@
       <div class="hero__top">
         <div class="hero__top-left">
           <img src="img/logo-left.svg" alt="">
-          <!-- <use :xlink:href="`#logo-left`"></use> -->
         </div>
         <div class="hero__top-right">
           <img src="img/logo-right.svg" alt="">
@@ -12,7 +11,6 @@
       </div>
       <div class="hero__bottom">
         <div class="hero__bottom-left">
-          <!-- <img src="img/believe.svg" alt=""> -->
         </div>
         <div class="hero__bottom-right">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" viewBox="0 0 32 36" fill="none">
@@ -21,9 +19,9 @@
               fill="black" />
           </svg>
           <p>
-            There could have been information about how ETG is&nbsp;not just a&nbsp;rapidly growing company, but
-            a&nbsp;group of&nbsp;like-minded people united by&nbsp;one great idea, and that everyone contributes
-            to&nbsp;the achievement of&nbsp;the goal, but...
+            As&nbsp;part of&nbsp;our ETG birthday celebrations, we&nbsp;could tell you again about how ETG is&nbsp;not
+            just a&nbsp;rapidly growing company, but a&nbsp;group of&nbsp;like-minded people united by&nbsp;one great
+            idea, where everyone contributes to&nbsp;the achievement of&nbsp;the goal, but...
           </p>
         </div>
       </div>
@@ -48,11 +46,20 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (max-width: 768px) {
+    height: 100vw;
+    min-height: unset;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+
+    @media (max-width: 768px) {
+      height: 100vw;
+    }
   }
 
   &__top {

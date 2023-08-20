@@ -1,15 +1,21 @@
 <template>
     <div class="wrap">
         <Transition name="wrap-card">
-            <div v-if="!showBigCard" class="wrap-cards">
+            <div class="wrap-cards">
                 <div v-for="(card, index) in ramdonCards" :key="index" @click="getClick(card)">
                     <MiniCard :img="card.imgCard" :open="card.open" />
                 </div>
             </div>
         </Transition>
         <Transition name="bounce">
-            <BigCard v-if="showBigCard" :card="infoForBigCard" @update:showBigCard="showBigCard = $event" :link="allPara" />
+            <BigCard v-if="showBigCard" :card="infoForBigCard" @update:showBigCard="showBigCard = $event"
+                @update:noScroll="noScroll = $event" :link="allPara" :noScroll="noScroll" />
         </Transition>
+        <div class="main-text">
+            <p v-if="!allPara">
+                Find all 12 pairs and discover what's hidden below on this page.
+            </p>
+        </div>
     </div>
 </template>
 
@@ -27,76 +33,62 @@ export default {
     data() {
         return {
             ramdonCards,
-            cardFirst: null,
-            cardSecond: null,
-            card1: null,
+            previousCard: null,
             showBigCard: false,
             infoForBigCard: null,
             countPara: 0,
-            allPara: false
+            allPara: false,
+            noScroll: false
         };
     },
     methods: {
-        repeatClick(card) {
-            if (card.open) {
-                this.showBigCard = true
-                this.infoForBigCard = card
-            }
-        },
         getClick(itemArray) {
-            if (this.cardFirst === null) {
-                this.cardFirst = itemArray;
-            } else {
-                this.cardSecond = itemArray;
-            }
+            let choosenCard = this.ramdonCards.find(card => card.id === itemArray.id)
 
-            if (itemArray.click === false && itemArray.para === false) {
-                itemArray.click = true;
-                itemArray.open = true;
-                if (this.cardFirst !== null && this.cardSecond !== null
-                    && this.cardFirst.click === true && this.cardSecond.click === true) {
-                    if (this.cardFirst.number === this.cardSecond.number) {
-                        this.cardFirst.para = true;
-                        this.cardSecond.para = true;
-                        this.cardFirst.click = false;
-                        this.cardSecond.click = false;
-                        this.infoForBigCard = this.cardSecond
+            if (choosenCard.open == false && choosenCard.para == false) {
+                if (this.previousCard !== null) {
+                    if (choosenCard.number === this.previousCard.number) {
+                        choosenCard.para = true
+                        this.previousCard.para = true
+
+                        this.infoForBigCard = this.previousCard
                         setTimeout(() => {
                             this.showBigCard = true
-                        }, 1000);
-                    }
-                    if (this.cardFirst.number !== this.cardSecond.number) {
-                        this.card1 = this.cardFirst.id;
-                        this.cardFirst.click = false;
-                        this.cardSecond.click = false;
+                        }, 800);
+                    } else {
+                        const chosenId = choosenCard.id
+                        const secondId = this.previousCard.id
                         setTimeout(() => {
-                            const cardBefore = ramdonCards.find(card => card.id === this.card1);
+                            let choosenCards1 = this.ramdonCards.find(card => card.id === chosenId)
+                            let choosenCards2 = this.ramdonCards.find(card => card.id === secondId)
+                            choosenCards1.open = false
+                            choosenCards2.open = false
 
-                            cardBefore.open = false;
-                            itemArray.open = false;
-                        }, 1000);
+                        }, 700);
                     }
-                    this.cardFirst = null;
-                    this.cardSecond = null;
+                    this.previousCard = null
+                } else {
+                    for (let i = 0; i < this.ramdonCards.length; i++) {
+                        if (this.ramdonCards[i].para === false) {
+                            this.ramdonCards[i].open = false
+                        }
+                    }
+
+                    this.previousCard = choosenCard
+                }
+                choosenCard.open = !choosenCard.open
+            } else {
+                if (choosenCard.para == true) {
+                    this.infoForBigCard = choosenCard
+                    this.showBigCard = true
                 }
             }
 
-            // if (itemArray.para === true) {
-            //     this.infoForBigCard = itemArray
-            //     // setTimeout(() => {
-            //         this.showBigCard = true
-            //     // }, 1000);
-            // }
-
-
-            if (itemArray.para === true) {
-              this.countPara++;
-              if (this.countPara === 12) {
+            let allPara = this.ramdonCards.find(card => card.para === false)
+            if (!allPara) {
                 this.allPara = true
-              }
+                this.$emit('update:allPara', true)
             }
-
-
         },
     },
 }
@@ -104,11 +96,11 @@ export default {
 
 <style lang="scss">
 .wrap-card-enter-active {
-    animation: wrap-card-leave 1s;
+    animation: wrap-card-leave .95s;
 }
 
 .wrap-card-leave-active {
-    animation: wrap-card-in 0.3s ease;
+    animation: wrap-card-in .3s ease;
 }
 
 @keyframes wrap-card-in {
@@ -132,11 +124,11 @@ export default {
 }
 
 .bounce-enter-active {
-    animation: bounce-in 1s;
+    animation: bounce-in .95s;
 }
 
 .bounce-leave-active {
-    animation: bounce-leave 1s ease;
+    animation: bounce-leave 0.3s ease;
 }
 
 @keyframes bounce-in {
@@ -156,17 +148,31 @@ export default {
 @keyframes bounce-leave {
     0% {
         opacity: 1;
+        transform: translateY(0);
     }
 
     100% {
         opacity: 0;
+        transform: translateY(0);
     }
 }
 
 .wrap {
-    // width: 74rem;
+    position: relative;
     width: 82.2223rem;
-    margin: 0 8rem 10.875rem 8rem;
+    min-height: 42rem;
+    margin: 0 8rem 7.19rem 8rem;
+
+    .main-text {
+        margin-top: 2rem;
+        height: 1.6875rem;
+
+        p {
+            text-align: center;
+            font-size: 1.25rem;
+            line-height: 1.6875rem;
+        }
+    }
 }
 
 .wrap-cards {

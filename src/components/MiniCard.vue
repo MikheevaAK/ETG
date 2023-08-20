@@ -62,9 +62,9 @@ export default {
     width: 8.3334rem;
     height: 12.5rem;
     border-radius: 1rem;
-    -ms-transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
-    transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
-    -webkit-transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
+    -ms-transition: transform 0.6s cubic-bezier(.4, .2, .2, 1);
+    transition: transform 0.6s cubic-bezier(.4, .2, .2, 1);
+    -webkit-transition: transform 0.6s cubic-bezier(.4, .2, .2, 1);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }

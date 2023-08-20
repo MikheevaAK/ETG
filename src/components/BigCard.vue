@@ -1,6 +1,13 @@
 <template>
     <div class="big-card">
-        <button class="big-card__button-close" @click="closeBigCard">
+        <button v-if="!link || noScroll" class="big-card__button-close" @click="closeBigCard">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M2.448 0L7.704 5.256L12.996 0L15.408 2.412L10.152 7.704L15.408 12.96L12.996 15.372L7.704 10.116L2.448 15.372L0 12.96L5.256 7.704L0 2.412L2.448 0Z"
+                    fill="white" />
+            </svg>
+        </button>
+        <button v-else @click="closeBigCardLast" class="big-card__button-close">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
                     d="M2.448 0L7.704 5.256L12.996 0L15.408 2.412L10.152 7.704L15.408 12.96L12.996 15.372L7.704 10.116L2.448 15.372L0 12.96L5.256 7.704L0 2.412L2.448 0Z"
@@ -10,8 +17,8 @@
         <div class="big-card__left">
             <div class="big-card__left-title">{{ card.title }}</div>
             <div class="big-card__left-descr" v-html="card.quote"></div>
-            <button v-if="!link" class="big-card__left-button" @click="closeBigCard">Got it!</button>
-            <router-link v-else to="/prediction" class="big-card__left-button">Got it!</router-link>
+            <button v-if="!link || noScroll" class="big-card__left-button" @click="closeBigCard">Got it!</button>
+            <button v-else @click="closeBigCardLast" class="big-card__left-button">Got it!</button>
         </div>
         <div class="big-card__right">
             <div class="big-card__right-descr" v-html="card.descr"></div>
@@ -36,11 +43,21 @@ export default {
         link: {
             type: Boolean,
             default: false
+        },
+        noScroll: {
+            type: Boolean,
+            default: false
         }
     },
     methods: {
         closeBigCard() {
             this.$emit('update:showBigCard', false)
+        },
+        closeBigCardLast() {
+            this.$emit('update:showBigCard', false)
+            let top = document.querySelector('#prediction').offsetTop;
+            window.scrollTo(0, top);
+            this.$emit('update:noScroll', true)
         }
     }
 }
@@ -48,7 +65,9 @@ export default {
 
 <style lang="scss">
 .big-card {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     gap: 4.62rem;
     width: 100%;
@@ -68,11 +87,17 @@ export default {
         border: none;
         outline: none;
         cursor: pointer;
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 
     &__right {
-        padding: 2.06rem 2.69rem 2.06rem 0;
-        margin-right: 0.19rem;
+        padding-right: 2.69rem;
+        margin: 2.06rem 0.19rem 1.8rem 0;
         width: 50%;
         overflow-y: auto;
         font-size: 1.25rem;
@@ -86,7 +111,6 @@ export default {
 
         &::-webkit-scrollbar {
             width: 0.25rem;
-            height: 4rem;
         }
 
         &::-webkit-scrollbar-thumb {
@@ -148,4 +172,5 @@ export default {
             outline: none;
         }
     }
-}</style>
+}
+</style>

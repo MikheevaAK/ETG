@@ -17,7 +17,7 @@ export default [
     },
     {
         id: 5,
-        text: 'We wish you meet as many ETG colleagues as possible and have a great time together. And not just on the call.'
+        text: 'We wish you meet as many ETG colleagues as possible and have a great time together. And not just on a call.'
     },
     {
         id: 6,
@@ -49,7 +49,7 @@ export default [
     },
     {
         id: 13,
-        text: 'AAAAAAAH! On the days when you feel like screaming, let you have by your side those who are willing to scream with you!'
+        text: 'AAAAAAAH! On the days when you feel like screaming, may you have those who are willing to scream with you by your side!'
     },
     {
         id: 14,
@@ -61,15 +61,15 @@ export default [
     },
     {
         id: 16,
-        text: 'Dearest beloved ideal employee, we wish you to get no sugarcoating, but only sincere feedback to the point.'
+        text: 'Dearest beloved ideal employee, we wish you to get no sugarcoating, but only sincere to-the-point feedback.'
     },
     {
         id: 17,
-        text: 'Dude, you have to understand that the team is your strength; together with it you persevere all shitty things.'
+        text: 'Dude, you have to understand that the team is your strength. Together you can withstand all shitty things.'
     },
     {
         id: 18,
-        text: 'Let there be those by your side with whom you are ready to join any project and, most importantly, not to run away from other projects.'
+        text: 'Let there be those who are ready to join any project and, most importantly, not to run away from other projects always by your side.'
     },
     {
         id: 19,
@@ -97,7 +97,7 @@ export default [
     },
     {
         id: 25,
-        text: 'Wait! Wait! Wait! Where’s the money?! We wish you only hear this phrase as a joke'
+        text: 'Wait! Wait! Wait! Where’s the money?! We hope you only hear this phrase as a joke'
     },
     {
         id: 26,
