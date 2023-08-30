@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>ETG Birthday Memory Game</title>
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+    <script>
+        (function (w, d, n) {
+            w[n] = w[n] || function () {
+                (w[n].a = w[n].a || []).push(arguments);
+            };
+            w[n].l = Date.now();
+
+            s = d.createElement('script');
+            s.src = '//mc.yandex.ru/metrika/tag.js';
+            d.head.appendChild(s);
+        })(window, document, 'ym');
+
+        ym(94773133, 'init', {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+</head>
+<body>
+<div id="app"></div>
+</body>
 </html>
