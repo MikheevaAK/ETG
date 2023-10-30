@@ -47,35 +47,16 @@
                     </svg>
                     <div class="fortune-cookies__top-title">wait wait wait!</div>
                     <div class="fortune-cookies__top-descr">
-                        On&nbsp;birthdays, it&rsquo;s customary to&nbsp;look back and evaluate what you&rsquo;ve
-                        achieved.
-                        I&nbsp;recall when&nbsp;I first joined ETG and saw the fiery eyes of&nbsp;employees who
-                        genuinely loved what
-                        they did. I&nbsp;realized the potential that awaited this company and understood that we&nbsp;have
-                        yet
-                        to&nbsp;unleash it&nbsp;fully.
+                        I&nbsp;recall when&nbsp;I first joined ETG and saw the fiery eyes of&nbsp;employees who genuinely loved what they did. I&nbsp;realized the potential that awaited this company and understood that we&nbsp;have yet to&nbsp;unleash it&nbsp;fully.
                         <br />
                         <br />
-                        Yes, we&nbsp;have grown significantly and continue to&nbsp;grow rapidly, but&nbsp;I believe and
-                        know that
-                        we&nbsp;can achieve much more together and become a&nbsp;truly global travel company.
+                        Yes, we&nbsp;have grown significantly and continue to&nbsp;grow rapidly, but&nbsp;I believe and know that we&nbsp;can achieve much more together and become a&nbsp;truly global travel company.
                         <br />
                         <br />
-                        It&nbsp;is&nbsp;no&nbsp;coincidence that you had to&nbsp;find pairs of&nbsp;cards in&nbsp;this
-                        game. This game
-                        is&nbsp;about all of&nbsp;us. Only by&nbsp;working together and striving for the most ambitious
-                        goals can
-                        we&nbsp;achieve them, and everyone&rsquo;s contribution is&nbsp;essential for everything
-                        to&nbsp;come
-                        together.
+                        It&nbsp;is&nbsp;no&nbsp;coincidence that you had to&nbsp;find pairs of&nbsp;cards in&nbsp;this game. This game is&nbsp;about all of&nbsp;us. Only by&nbsp;working together and striving for the most ambitious goals can we&nbsp;achieve them, and everyone&rsquo;s contribution is&nbsp;essential for everything to&nbsp;come together.
                         <br />
                         <br />
-                        Finding someone with similar values is&nbsp;difficult, but here we&nbsp;have an&nbsp;entire
-                        company
-                        of&nbsp;like-minded people. So, no&nbsp;matter what difficulties and problems arise, I&rsquo;m
-                        confident that
-                        our company will overcome them, and we&nbsp;can make the world better. Thank you, and happy
-                        birthday ETG!
+                        Finding someone with similar values is&nbsp;difficult, but here we&nbsp;have an&nbsp;entire company of&nbsp;like-minded people. So,&nbsp;no&nbsp;matter what difficulties and problems arise, I&rsquo;m&nbsp;confident that our company will overcome them, and&nbsp;we&nbsp;can make the world better.
                     </div>
                     <div class="fortune-cookies__top-name">
                         Felix Shpilman
@@ -91,7 +72,7 @@
 
             <div class="fortune-cookies__bottom">
                 <div class="fortune-cookies__bottom-title">
-                    Fortune Cookies, wisdom from the coach
+                    Fortune Cookies, OR A WORD OF WISDOM
                     <svg class="quote-start" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
                         fill="none">
                         <path
@@ -113,12 +94,10 @@
                 </div>
 
                 <div class="fortune-cookies__bottom-descr">
-                    It’s cookie time with the boss, and here is the promised gift: a word of wisdom, a wish, advice, a
-                    prediction or
-                    just a lovely phrase. All of which make it worth your while getting distracted by this landing page!
+                    Here you can get the promised fortune cookies: a word of wisdom, a wish, advice, a prediction or just a lovely phrase. All of which make it worth your while getting distracted by this landing page!
                     <br />
                     <br />
-                    P. S. Take as many cookies as you want, calories don’t count on birthdays!
+                    P. S. Take as many cookies as you want!
                 </div>
             </div>
 
@@ -508,7 +487,7 @@ export default {
 
         &-title {
             margin-bottom: 0.56rem;
-            font-size: 2.25rem;
+            font-size: 2.5rem;
             font-weight: 500;
             line-height: normal;
             letter-spacing: 0.1125rem;
@@ -534,7 +513,8 @@ export default {
 
         &-title {
             position: relative;
-            margin-bottom: 2.25rem;
+            width: 56rem;
+            margin-bottom: 2.5rem;
             font-size: 6rem;
             font-weight: 500;
             line-height: 5.625rem;
@@ -552,7 +532,7 @@ export default {
             .quote-end {
                 position: absolute;
                 top: 11.75rem;
-                left: 21.94rem;
+                left: 25.94rem;
                 width: 4rem;
                 height: 4rem;
             }

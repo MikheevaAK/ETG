@@ -16,7 +16,6 @@
         </button>
         <div class="big-card__left">
             <div class="big-card__left-title">{{ card.title }}</div>
-            <div class="big-card__left-descr" v-html="card.quote"></div>
             <button v-if="!link || noScroll" class="big-card__left-button" @click="closeBigCard">Got it!</button>
             <button v-else @click="closeBigCardLast" class="big-card__left-button">Got it!</button>
         </div>
@@ -100,7 +99,7 @@ export default {
         margin: 2.06rem 0.19rem 1.8rem 0;
         width: 50%;
         overflow-y: auto;
-        font-size: 1.25rem;
+        font-size: 1.38889rem;
         font-style: normal;
         font-weight: 400;
         line-height: 1.6875rem;
@@ -142,7 +141,7 @@ export default {
 
         &-title {
             margin-bottom: 0.5rem;
-            font-size: 2.25rem;
+            font-size: 2.5rem;
             font-weight: 500;
             line-height: normal;
             letter-spacing: 0.1125rem;

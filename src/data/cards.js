@@ -18,7 +18,7 @@ export default [
         img: 'img/sprout-big.png',
         imgCard: 'img/sprout.png',
         quote: '&lsquo;For me, success is&nbsp;not about the wins and losses. It&rsquo;s about helping these young fellas be&nbsp;the best versions of&nbsp;themselves on&nbsp;and off the field.&rsquo;',
-        descr: 'ETG, as&nbsp;a&nbsp;pioneering company in the travel business, cannot be&nbsp;stopped by&nbsp;borders, even in&nbsp;terms of&nbsp;development. That&rsquo;s why we&nbsp;already have <b>more than 2,200 employees in&nbsp;over 70&nbsp;countries around the world</b>, from North and South America to&nbsp;Asia (so&nbsp;many that all the countries won&rsquo;t fit into this card). If&nbsp;you&rsquo;re not impressed by&nbsp;these numbers, just for reference, we&nbsp;were slightly over 800 people at&nbsp;the beginning of&nbsp;2022. ETG has more than doubled in&nbsp;size in&nbsp;the last year and a&nbsp;half and it&rsquo;s not going to&nbsp;stop. Beyond frontiers!',
+        descr: 'ETG, as&nbsp;a&nbsp;pioneering company in&nbsp;the travel business, cannot be&nbsp;stopped by&nbsp;borders, even in&nbsp;terms of&nbsp;development. We&nbsp;were slightly over 800 people at&nbsp;the beginning of&nbsp;2022 and now there&rsquo;re a&nbsp;lot of&nbsp;ETG employees who are located in&nbsp;different countries from North and South America to&nbsp;Asia (countries won&rsquo;t fit into this card).<br/><br/>We&rsquo;re growing every quarter and not going to&nbsp;stop. Beyond Frontiers!',
         click: false,
         para: false,
         open: false
@@ -162,7 +162,7 @@ export default [
         img: 'img/sprout-big.png',
         imgCard: 'img/sprout.png',
         quote: '&lsquo;For me, success is&nbsp;not about the wins and losses. It&rsquo;s about helping these young fellas be&nbsp;the best versions of&nbsp;themselves on&nbsp;and off the field.&rsquo;',
-        descr: 'ETG, as&nbsp;a&nbsp;pioneering company in the travel business, cannot be&nbsp;stopped by&nbsp;borders, even in&nbsp;terms of&nbsp;development. That&rsquo;s why we&nbsp;already have <b>more than 2,200 employees in&nbsp;over 70&nbsp;countries around the world</b>, from North and South America to&nbsp;Asia (so&nbsp;many that all the countries won&rsquo;t fit into this card). If&nbsp;you&rsquo;re not impressed by&nbsp;these numbers, just for reference, we&nbsp;were slightly over 800 people at&nbsp;the beginning of&nbsp;2022. ETG has more than doubled in&nbsp;size in&nbsp;the last year and a&nbsp;half and it&rsquo;s not going to&nbsp;stop. Beyond frontiers!',
+        descr: 'ETG, as&nbsp;a&nbsp;pioneering company in&nbsp;the travel business, cannot be&nbsp;stopped by&nbsp;borders, even in&nbsp;terms of&nbsp;development. We&nbsp;were slightly over 800 people at&nbsp;the beginning of&nbsp;2022 and now there&rsquo;re a&nbsp;lot of&nbsp;ETG employees who are located in&nbsp;different countries from North and South America to&nbsp;Asia (countries won&rsquo;t fit into this card).<br/><br/>We&rsquo;re growing every quarter and not going to&nbsp;stop. Beyond Frontiers!',
         click: false,
         para: false,
         open: false

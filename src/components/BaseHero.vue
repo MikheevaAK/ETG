@@ -19,9 +19,7 @@
               fill="black" />
           </svg>
           <p>
-            As&nbsp;part of&nbsp;our ETG birthday celebrations, we&nbsp;could tell you again about how ETG is&nbsp;not
-            just a&nbsp;rapidly growing company, but a&nbsp;group of&nbsp;like-minded people united by&nbsp;one great
-            idea, where everyone contributes to&nbsp;the achievement of&nbsp;the goal, but...
+            ETG is&nbsp;not just a&nbsp;rapidly growing company, but a&nbsp;group of&nbsp;like-minded people united by&nbsp;one great idea, where everyone contributes to&nbsp;the&nbsp;achievement of&nbsp;the goal.
           </p>
         </div>
       </div>
@@ -80,12 +78,12 @@ export default {
   }
 
   &__bottom {
-    margin: 0 10.12rem 2.44rem 0;
+    margin: 0 15.3rem 4.5rem 0;
     display: flex;
     justify-content: space-between;
 
     &-right {
-      width: 34.25rem;
+      width: 31.25rem;
       font-size: 1.75rem;
       font-weight: 400;
       line-height: 2.25rem;
